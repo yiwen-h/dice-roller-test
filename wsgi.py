@@ -6,8 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     dice = Dice()
-    roll = dice.roll()
-    return jsonify({'roll': roll})
+    return jsonify({'roll': dice.roll()})
 
 @app.route('/hello')
 def hello():
